@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
+import { TranslateModule, TranslateService } from 'ng2-translate/ng2-translate';
 
 @NgModule({
   declarations: [
@@ -12,9 +13,10 @@ import { HomeComponent } from './home/home.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    TranslateModule.forRoot()
   ],
-  providers: [],
+  providers: [TranslateService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
